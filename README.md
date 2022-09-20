@@ -44,11 +44,11 @@ npm install @onpaper/data-store
 
 ```js
 // es module
-import pkg from "@onpaper/event-bus";
-const { EventBus } = pkg;
+import pkg from "@onpaper/data-store";
+const { defineStore } = pkg;
 
 // commonjs
-const { EventBus } = require("@onpaper/event-bus");
+const { defineStore } = require("@onpaper/data-store");
 ```
 
 ### TypeScript
@@ -56,7 +56,7 @@ const { EventBus } = require("@onpaper/event-bus");
 if you use TypeScript
 
 ```js
-import { EventBus } from "@onpaper/event-bus";
+import { defineStore } from "@onpaper/data-store";
 ```
 
 ## 3、quick start

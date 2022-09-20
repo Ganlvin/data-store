@@ -1,5 +1,5 @@
 {
-  "name": "data-store",
+  "name": "@onpaper/data-store",
   "version": "1.0.0",
   "description": "a state management library, and lightweight",
   "main": "./dist/index.js",
@@ -18,7 +18,9 @@
     "url": "git+https://github.com/Ganlvin/data-store.git"
   },
   "keywords": [
-    "data-store"
+    "data-store",
+    "event-store",
+    "store"
   ],
   "author": "wenlang",
   "license": "MIT",
