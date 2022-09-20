@@ -20,15 +20,19 @@ export function baseTest() {
   let immediateNum = 0
   const offName = studentStore.watch(
     'name',
-    (newValue, oldValue) => {
+    function (newValue, oldValue) {
       if (newValue !== '' && oldValue !== undefined) {
         throw new Error('watch name error')
+      }
+      if (this.test !== 123) {
+        throw new Error('this error')
       }
       immediateNum++
     },
     {
       immediate: true
-    }
+    },
+    { test: 123 }
   )
   if (immediateNum !== 1) {
     throw new Error('immediate  error')

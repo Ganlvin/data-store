@@ -1,7 +1,7 @@
 {
   "name": "data-store",
   "version": "1.0.0",
-  "description": "a state management library, use like Pinia, and lightweight",
+  "description": "a state management library, and lightweight",
   "main": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
   "files": [
