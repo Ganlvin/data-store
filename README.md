@@ -362,8 +362,8 @@ studentStore.watch('name', newName => {
   console.log(newName) // -> jack
 })
 
-// 参数一 : Function name registered in actions
-// 参数二 : You can send a payload to the dispatch function 
+// first : Function name registered in actions
+// second : You can send a payload to the dispatch function 
 studentStore.dispatch('getStudentInfoAction', { id: 123 })
 ```
 

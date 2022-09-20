@@ -1,6 +1,6 @@
 {
   "name": "@onpaper/data-store",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a state management library, and lightweight",
   "main": "./dist/index.js",
   "types": "./dist/types/index.d.ts",

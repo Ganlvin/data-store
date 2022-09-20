@@ -1,4 +1,4 @@
-<a href="[/README.md](https://github.com/Ganlvin/data-store/blob/main/README.md)">English</a>   
+<a href="https://github.com/Ganlvin/data-store/blob/main/README.md">English</a>   
 <a href="https://github.com/Ganlvin/data-store/blob/main/README_CN.md">简体中文</a>
 
 - [简介](#简介)
