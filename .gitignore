@@ -1,0 +1,8 @@
+dist
+.DS_Store
+node_modules
+temp
+explorations
+TODO.md
+*.log
+.idea
