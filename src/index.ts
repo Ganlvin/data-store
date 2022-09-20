@@ -154,17 +154,16 @@ class DataStore<T extends StateTree, A extends actionsType<T> = {}> {
   }
 
   /**
-   *
-   * @param stateKey change the value of which key
-   * @param stateValue change to what value
+   * change the value of state
+   * @param keyAndValue
    */
-  setState(stateKey: setStateObj) {
+  setState(keyAndValue: setStateObj) {
     const stateKeys = Object.keys(this.state)
-    for (const key in stateKey) {
+    for (const key in keyAndValue) {
       if (stateKeys.indexOf(key) === -1) {
         throw new Error(`the ${key} does not contain your state key`)
       }
-      this.state[key as keyof T] = stateKey[key]
+      this.state[key as keyof T] = keyAndValue[key]
     }
   }
 
