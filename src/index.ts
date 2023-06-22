@@ -91,7 +91,7 @@ class DataStore<T extends StateTree, A extends actionsType<T> = {}> {
    * @returns function to cancel listening
    */
   watch(
-    stateKeys: StateKeys,
+    stateKeys: Extract<keyof T, string> | Array<Extract<keyof T, string>>,
     stateCallback: CallbackType | CallbackType[],
     options?: WatchOption,
     thisArg?: any
@@ -128,7 +128,7 @@ class DataStore<T extends StateTree, A extends actionsType<T> = {}> {
     return () => {
       if (Array.isArray(stateCallback)) {
         stateCallback.forEach(callBackFn => {
-          this.offWatch(formatKey, callBackFn)
+          this.offWatch(formatKey as any, callBackFn)
         })
       }
     }
@@ -139,7 +139,10 @@ class DataStore<T extends StateTree, A extends actionsType<T> = {}> {
    * @param stateKeys Cancelled key name
    * @param stateCallback Pass in the callback function to cancel
    */
-  offWatch(stateKeys: StateKeys, stateCallback: CallbackType | CallbackType[]) {
+  offWatch(
+    stateKeys: Extract<keyof T, string> | Array<Extract<keyof T, string>>,
+    stateCallback: CallbackType | CallbackType[]
+  ) {
     if (typeof stateKeys === 'string') {
       stateKeys = [stateKeys]
     }
